@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void) {
     double accumulator;
@@ -35,7 +36,7 @@ int main(void) {
                 break;
             case 'E':
                 printf("End of Calculations");
-                break;
+                exit(0);
             default:
                 printf("Error, unknow operator");
         }
