@@ -26,6 +26,9 @@ void elapsed_time(struct time start, struct time end, struct time *diff) {
         end.hours -= 1;
         end.minutes += 60;
     }
+    while (start.hours > end.hours) {
+        end.hours += 24;
+    }
     diff -> minutes = end.minutes - start.minutes;
     diff -> hours = end.hours - start.hours;
 }
